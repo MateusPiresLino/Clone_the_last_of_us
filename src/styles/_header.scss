@@ -1,0 +1,42 @@
+@use './variaveis';
+
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+
+    &__logo {
+        width: 110px;
+    }
+
+    &__buttons {
+        display: flex;
+
+        .header__link,
+        .header__button {
+            color: variaveis.$cor-texto;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: .7rem 1.4rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+
+        .header__button {
+            background-color: variaveis.$cor-botao;
+            color: variaveis.$cor-texto-botao;
+            border: none;
+        }
+
+        .header__link:hover,
+        .header__button:hover {
+            opacity: 0.8;
+        }
+    }
+}

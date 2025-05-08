@@ -1,0 +1,73 @@
+@use './variaveis';
+
+.episodios {
+    padding: 4rem 0;
+    background-color: variaveis.$cor-fundo;
+    
+    
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .episodios__titulo {
+            color: variaveis.$cor-texto;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+
+        .episodios__dropdown {
+            background-color: variaveis.$cor-fundo;
+            color: variaveis.$cor-texto;
+            padding: 0.5rem 1rem;
+            border: 1px solid variaveis.$cor-texto;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    &__lista {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        color: variaveis.$cor-texto;
+
+        .episodios__imagem {
+            border-radius: 4px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.8rem;
+        }
+
+        .episodios__titulo-ep {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .episodios__descricao {
+            font-size: 0.9rem;
+            color: variaveis.$cor-hover;
+            margin-bottom: 0.5rem;
+        }
+
+        .episodios__link {
+            color: variaveis.$cor-hover;
+            font-size: 0.9rem;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
